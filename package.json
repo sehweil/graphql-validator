@@ -48,6 +48,7 @@
     "@creditkarma/graphql-loader": "^0.6.3",
     "commander": "^2.11.0",
     "glob": "^7.1.2",
+    "graphql": "^14.2.1",
     "graphql-tools": "^1.1.0"
   },
   "peerDependencies": {

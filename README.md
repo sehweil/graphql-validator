@@ -74,13 +74,21 @@ loadSchema('./schema/*.graphql').then((schema) => {
 })
 ```
 
-Validate query using CLI tool
+##### Validate query using CLI tool
 
 ```sh
 > graphql-validator -s "./schema/**/*.graphql" "./queries/*.graphql"
 ```
 
 The validator will first load and validate the schema, throwing errors if the schema isn't valid.  Then it will check each query in the file glob by parsing the query and validating it against the schema.  If errors are found, the will be displayed by file name and exit with exit code 1.
+
+##### Output the merged schema into a file with the CLI tool
+
+```sh
+> graphql-validator -s "./schema/**/*.graphql" -o "yourMergedSchemaFileName.graphql" "./queries/*.graphql"
+```
+
+The will merge all the schema given in the `"./schema/**/*.graphql"` glob and output it into `"yourMergedSchemaFileName.graphql"`
 
 *Note:* you must use quotes around each file glob or the utility will not work properly.
 
